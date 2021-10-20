@@ -1,0 +1,27 @@
+{
+  "name": "todo-api-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silviohfc/todo-api-pipeline.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silviohfc/todo-api-pipeline/issues"
+  },
+  "homepage": "https://github.com/silviohfc/todo-api-pipeline#readme"
+}
