@@ -37,12 +37,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3333/create",
-					"protocol": "http",
+					"raw": "{{baseURL}}/create",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "3333",
 					"path": [
 						"create"
 					]
@@ -69,12 +67,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3333/",
-					"protocol": "http",
+					"raw": "{{baseURL}}/",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "3333",
 					"path": [
 						""
 					]
@@ -101,12 +97,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3333/:id",
-					"protocol": "http",
+					"raw": "{{baseURL}}/:id",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "3333",
 					"path": [
 						":id"
 					],
