@@ -18,9 +18,14 @@ jobs:
       run: |
         git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/todo-api-pipeline.git
         git push heroku HEAD:refs/heads/master -f
-  test-api:
+  
+  api-test:
     needs: build
-    - uses: matt-ball/newman-action@master
-    with:
-      collection: todo-api.postman_collection
-      environment: todo-api.postman_collection
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: todo-api.postman_collection
+          environment: todo-api.postman_collection
+      
