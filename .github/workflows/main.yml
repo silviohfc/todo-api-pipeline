@@ -17,4 +17,4 @@ jobs:
       if: github.ref == 'refs/heads/master' && job.status == 'success'
       run: |
         git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/todo-api-pipeline.git
-        git push heroku HEAD:master -f
+        git push heroku HEAD:refs/heads/master -f
