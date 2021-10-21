@@ -1,7 +1,7 @@
 const express = require('express')
 const { v4: uuid } = require('uuid')
 
-const port = 3333
+const PORT = process.env.PORT || 3333
 
 const app = express()
 app.use(express.json())
@@ -38,4 +38,4 @@ app.delete('/:id', (req, res) => {
   return res.status(204).send()
 })
 
-app.listen(port, () => console.log(`server running in port ${port}`))
+app.listen(PORT, () => console.log(`server running in port ${PORT}`))
