@@ -27,7 +27,9 @@ jobs:
       - name: Install Newman
         run: npm install -g newman newman-reporter-html
       - name: Test and Generate Report
-        run: newman run todo-api.postman_collection --environment Production.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export "newman/report.html"
+        run: |
+          newman run todo-api.postman_collection --environment Production.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export "newman/report.html"
+          ls -a
       - name: Archive api test results
         uses: actions/upload-artifact@v2.2.4
         with:
