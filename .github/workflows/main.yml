@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Install Newman
-        run: npm install -g newman newman-reporter-html
+        run: npm install -g newman newman-reporter-htmlextra
       - name: Test and Generate Report
         run: |
           newman run todo-api.postman_collection --environment Production.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export "newman/report.html"
