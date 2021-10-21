@@ -24,8 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: matt-ball/newman-action@master
-        with:
-          collection: todo-api.postman_collection
-          environment: todo-api.postman_collection
-      
+      - name: Install Newman
+        run: npm install -g newman newman-reporter-html
+      - name: Test and Generate Report
+        run: newman run todo-api.postman_collection --environment Production.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export "newman/report.html"
